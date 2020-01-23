@@ -1,0 +1,2 @@
+grep -R "$1" | sed 's/\:.*//' | sed 's#^.*/##' | sort
+cat to_delete.txt | tr ' \tr' '\n' | sed -e 's/$/.txt/' | sed 's#^#delete/#' | xargs rm 
